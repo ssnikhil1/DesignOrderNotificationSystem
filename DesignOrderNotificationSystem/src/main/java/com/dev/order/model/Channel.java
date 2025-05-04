@@ -1,5 +1,5 @@
-package com.dev.notification.model;
+package com.dev.order.model;
 
 public enum Channel {
-
+    EMAIL, SMS
 }

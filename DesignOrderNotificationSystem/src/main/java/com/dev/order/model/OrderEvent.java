@@ -3,9 +3,10 @@ package com.dev.order.model;
 public class OrderEvent {
     private String orderId;
     private String userEmail;
-    private String preferredChannel;  // email or sms
+    private String phoneNumber;
+    private Channel preferredChannel;  // email or sms
 
-    public OrderEvent(String orderId, String userEmail, String preferredChannel) {
+    public OrderEvent(String orderId, String userEmail, Channel preferredChannel) {
         this.orderId = orderId;
         this.userEmail = userEmail;
         this.preferredChannel = preferredChannel;
@@ -27,11 +28,19 @@ public class OrderEvent {
         this.userEmail = userEmail;
     }
 
-    public  String getPreferredChannel() {
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public  Channel getPreferredChannel() {
         return preferredChannel;
     }
 
-    public void setPreferredChannel(String preferredChannel) {
+    public void setPreferredChannel(Channel preferredChannel) {
         this.preferredChannel = preferredChannel;
     }
 }
